@@ -94,4 +94,7 @@ end
 This implementation is a "has-many" / "belongs-to" relationship with a single source of truth.
 (X) True ( ) False
 
+?: A user can have many "likes" from posts with a "has-many-through" relationship.
+(X) True ( ) False
+
 ???
