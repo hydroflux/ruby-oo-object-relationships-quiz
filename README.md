@@ -32,7 +32,7 @@
 
 ( ) True (X) False
 
-?: If a comment can have only one user and a user can user can have many comments, what is this relationship called?
+?: If a comment can have only one user and a user can have many comments, what is this relationship called?
 
 ( ) belongs to ( ) has many (X) belongs to/has many ( ) Object Reciprocity
 
@@ -54,6 +54,25 @@ class User
 
   def comments
     @comments
+  end
+end
+
+class Comment
+  attr_accessor :user, :text
+
+  @@all = []
+
+  def initialize(text)
+    @text = text
+    save
+  end
+
+  def save
+    @@all << self
+  end
+
+  def self.all
+    @@all
   end
 end
 ```
@@ -84,6 +103,7 @@ class Comment
   end
 end
 ```
+
 ```ruby
 class User
   attr_accessor :user
