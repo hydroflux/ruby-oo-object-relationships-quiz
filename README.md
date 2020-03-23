@@ -118,7 +118,7 @@ class User
   end
 
   def comments
-    Comment.all.select {|song| comment.user == self}
+    Comment.all.select {|comment| comment.user == self}
   end
 end
 ```
