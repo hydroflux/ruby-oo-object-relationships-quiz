@@ -113,6 +113,7 @@ class User
   end
 
   def add_comment(text)
+    comment = Comment.new(text)
     comment.user = self
   end
 
